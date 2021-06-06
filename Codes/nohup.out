@@ -1,0 +1,95 @@
+2020-09-02 01:08:20.220035: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 AVX512F FMA
+2020-09-02 01:08:20.377341: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:17:00.0
+totalMemory: 10.91GiB freeMemory: 10.75GiB
+2020-09-02 01:08:20.377374: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:17:00.0, compute capability: 6.1)
+/home/ubuntu/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:469: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint8 = np.dtype([("qint8", np.int8, 1)])
+/home/ubuntu/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:470: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint8 = np.dtype([("quint8", np.uint8, 1)])
+/home/ubuntu/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:471: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint16 = np.dtype([("qint16", np.int16, 1)])
+/home/ubuntu/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:472: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_quint16 = np.dtype([("quint16", np.uint16, 1)])
+/home/ubuntu/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:473: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  _np_qint32 = np.dtype([("qint32", np.int32, 1)])
+/home/ubuntu/anaconda3/lib/python3.6/site-packages/tensorflow/python/framework/dtypes.py:476: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  np_resource = np.dtype([("resource", np.ubyte, 1)])
+/home/ubuntu/anaconda3/lib/python3.6/importlib/_bootstrap.py:219: RuntimeWarning: compiletime version 3.5 of module 'tensorflow.python.framework.fast_tensor_util' does not match runtime version 3.6
+  return f(*args, **kwds)
+DATASET hajj
+TRAIN_FOLDER 
+TEST_FOLDER /home/dataset_2020/UMN_all/hajj/testing/frames
+GPU 0
+BATCH_SIZE 4
+NUM_HIS 4
+ITERATIONS 1
+EVALUATE compute_auc
+HEIGHT 256
+WIDTH 256
+FLOWNET_CHECKPOINT ../history/checkpoints/pretrains/flownet-SD.ckpt-0
+FLOW_HEIGHT 384
+FLOW_WIDTH 512
+L_NUM 2
+ALPHA_NUM 1
+LAM_ADV 0.05
+LAM_LP 1.0
+LAM_GDL 1.0
+LAM_FLOW 0.01
+LRATE_G [1e-05, 5e-07]
+LRATE_G_BOUNDARIES [40000]
+LRATE_D [5e-05, 5e-07]
+LRATE_D_BOUNDARIES [40000]
+SAVE_DIR hajj_2009020108
+SNAPSHOT_DIR ../history/checkpoints/hajj_2009010913
+SUMMARY_DIR ../history/summary/hajj_2009020108
+PSNR_DIR ../history/psnrs/hajj_2009020108
+<================ Constants information ================>
+	DATASET	hajj
+	TRAIN_FOLDER	
+	TEST_FOLDER	/home/dataset_2020/UMN_all/hajj/testing/frames
+	GPU	0
+	BATCH_SIZE	4
+	NUM_HIS	4
+	ITERATIONS	1
+	EVALUATE	compute_auc
+	HEIGHT	256
+	WIDTH	256
+	FLOWNET_CHECKPOINT	../history/checkpoints/pretrains/flownet-SD.ckpt-0
+	FLOW_HEIGHT	384
+	FLOW_WIDTH	512
+	L_NUM	2
+	ALPHA_NUM	1
+	LAM_ADV	0.05
+	LAM_LP	1.0
+	LAM_GDL	1.0
+	LAM_FLOW	0.01
+	LRATE_G	[1e-05, 5e-07]
+	LRATE_G_BOUNDARIES	[40000]
+	LRATE_D	[5e-05, 5e-07]
+	LRATE_D_BOUNDARIES	[40000]
+	SAVE_DIR	hajj_2009020108
+	SNAPSHOT_DIR	../history/checkpoints/hajj_2009010913
+	SUMMARY_DIR	../history/summary/hajj_2009020108
+	PSNR_DIR	../history/psnrs/hajj_2009020108
+
+testing = generator
+Init global successfully!
+Restored model parameters from ../history/checkpoints/hajj_2009010913/model.ckpt-47500
+Traceback (most recent call last):
+  File "inference.py", line 141, in <module>
+    inference_func(ckpt, dataset_name, evaluate_name)
+  File "inference.py", line 82, in inference_func
+    feed_dict={test_video_clips_tensor: video_clip[np.newaxis, ...]})
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 889, in run
+    run_metadata_ptr)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1120, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1317, in _do_run
+    options, run_metadata)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1323, in _do_call
+    return fn(*args)
+  File "/home/ubuntu/anaconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1302, in _run_fn
+    status, run_metadata)
+KeyboardInterrupt
