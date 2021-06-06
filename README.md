@@ -59,8 +59,14 @@ python inference.py  --dataset  avenue    \
                     --snapshot_dir    checkpoints/pretrains/avenue
 ```
 
+## 4. get optical flow images
 
-## 4. Training from scratch (here we use ped2 and avenue datasets for examples)
+```python
+python flow.py
+```
+![optical_flow](assets/opticalflow.JPG)
+
+## 5. Training from scratch (here we use ped2 and avenue datasets for examples)
 * Download the pretrained FlowNet at first and see above mentioned step 3.1 
 * Set hyper-parameters
 The default hyper-parameters, such as $\lambda_{init}$, $\lambda_{gd}$, $\lambda_{op}$, $\lambda_{adv}$ and the learning rate of G, as well as D, are all initialized in **training_hyper_params/hyper_params.ini**. 
@@ -119,10 +125,10 @@ Open the browser and type **https://ip:10086**. Following is the screen shot of 
 Since the models are trained in BGR image color channels, the visualized images in tensorboard look different from RGB channels.
 In the demo, we change the output images from BGR to RGB.
 
-# Experiment Result
-![images_tensorboard](assets/result_1.JPG)
-![images_tensorboard](assets/result_2.JPG)
-![images_tensorboard](assets/result_3.JPG)
+# 5.Experiment Result
+![result_1](assets/result_1.jpg)
+![result_2](assets/result_2.jpg)
+![result_3](assets/result_3.jpg)
 ## Notes
 The flow loss (temporal loss) module is based on [a TensorFlow implementation of FlowNet2](https://github.com/sampepose/flownet2-tf). Thanks for their nice work.
 ## Citation
