@@ -35,9 +35,11 @@ cd into Data folder of project and run the shell scripts (**ped1.sh, ped2.sh, av
 Please manually download all datasets from [ped1.tar.gz, ped2.tar.gz, avenue.tar.gz and shanghaitech.tar.gz](https://onedrive.live.com/?authkey=%21AMqh2fTSemfrokE&id=3705E349C336415F%215109&cid=3705E349C336415F)
 and tar each tar.gz file, and move them in to **Data** folder.
 
-You can also download data from BaiduYun(https://pan.baidu.com/s/1j0TEt-2Dw3kcfdX-LCF0YQ) i9b3 
+You can also download data from BaiduYun [https://pan.baidu.com/s/1j0TEt-2Dw3kcfdX-LCF0YQ](https://pan.baidu.com/s/1j0TEt-2Dw3kcfdX-LCF0YQ) i9b3 
 
-Our Hajj Dataset are agvalable at https://pan.baidu.com/s/1j0TEt-2Dw3kcfdX-LCF0YQ i9b3 
+Our Hajj Dataset are agvalable at [https://1drv.ms/u/s!AiZbSIgZyw2tjA4wNdJC2NMqYRKg?e=XknW4D](https://1drv.ms/u/s!AiZbSIgZyw2tjA4wNdJC2NMqYRKg?e=XknW4D)
+
+You can also download data from BaiduYun [https://pan.baidu.com/s/1ZpbJF8RwwCh-LnO_GHOjUA](https://pan.baidu.com/s/1ZpbJF8RwwCh-LnO_GHOjUA)  39j3 
 
 ## 3. Testing on saved models
 * Download the trained models (There are the pretrained FlowNet and the trained models of the papers, such as ped1, ped2 and avenue).
